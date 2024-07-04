@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ANV Consultants</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header id="#home">
+    <header id="home">
         <div class="container">
             <div class="logo">
                 <img src="/assets/logo.png" alt="ANV Consultants" style="height: auto; width: 160px;">
             </div>
-            <nav>
+            <nav id="nav-menu">
+                <div class="close-btn" id="close-btn">&times;</div>
                 <ul style="font-weight: 600; font-size: 22px;">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#introPoint">About</a></li>
@@ -20,12 +24,17 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            
             <div class="social-icons">
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
                 <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                 <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </header>
+      
 
     <section class="hero">
         <div class="carousel-container">
@@ -46,18 +55,18 @@
     </section>
     <section id="introPoint">
         <div class="intro">
-             <p>At ANV Consultants Pvt Ltd, we believe in becoming the backbone of a
-            business, so that, you can just focus on growing the business, while we can take
-            care of the rest! There are a plethora of services that we provide which helps
-            businesses in regulatory compliance in the country. Established in 2024, we might
-            be new to the market, but with the right kind of knowledge and the vision of
-            making indian businesses stable and secure when it comes to legalities of
-            business operations in India.</p>
+            <p>At ANV Consultants Pvt Ltd, we believe in becoming the backbone of a
+                business, so that, you can just focus on growing the business, while we can take
+                care of the rest! There are a plethora of services that we provide which helps
+                businesses in regulatory compliance in the country. Established in 2024, we might
+                be new to the market, but with the right kind of knowledge and the vision of
+                making indian businesses stable and secure when it comes to legalities of
+                business operations in India.</p>
         </div>
     </section>
 
     <section class="clearfix" id="service">
-        <h2 >PRACTICE AREAS</h2>
+        <h2>PRACTICE AREAS</h2>
         <div class="cards-container">
             <div class="card">
                 <img src="/assets/legal.png" alt="LEGAL SERVICES" style="height: min-content;">
@@ -100,7 +109,7 @@
     <section class="contact-section" id="contact">
         <div class="contact-container">
             <h2>SEND US A MESSAGE</h2>
-            <form action="https://formsubmit.co/mohitbha.459@gmail.com" method="POST">
+            <form id="contact-form" action="mailing.php" method="POST">
                 <div class="form-group">
                     <input type="text" id="name" name="name" placeholder="Name" required>
                 </div>
@@ -111,13 +120,13 @@
                     <input type="text" id="subject" name="subject" placeholder="Subject" required>
                 </div>
                 <div class="form-group">
-                    <textarea id="message" name="msg" rows="5" placeholder="Message" required></textarea>
+                    <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
                 </div>
                 <button type="submit">SEND</button>
             </form>
         </div>
     </section>
-    <footer >
+    <footer>
         <div class="footer-container">
             <div class="footer-column">
                 <h4>NAVIGATE</h4>
@@ -131,8 +140,8 @@
             <div class="footer-column">
                 <h4>CONTACT</h4>
                 <p>Find us on social media to keep updated!</p>
-                <p>E: <a href="mailto:hello@bigfirelaw.com">hello@bigfirelaw.com</a></p>
-                <div class="social-icons">
+                <p>Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+                <div class="social-icon">
                     <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
@@ -144,11 +153,10 @@
             </div>
         </div>
         <div class="rk">
-            <a href="https://www.rkglobalcomm.com"><img src="/assets/rkgloballogo.png" alt="R K Global Commmunications" style="height: auto; width: 80px;"></a>
+            <a href="https://www.rkglobalcomm.com"><img src="/assets/rkgloballogo.png" alt="R K Global Communications" style="height: auto; width: 80px;"></a>
             <p>Managed and designed by R K Global Communications</p>
         </div>
     </footer>
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
